@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Quiz">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_game"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/TxTTime"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:textColor="#DD0000"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/bgSpeaker"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/speaker"
+            android:button="@drawable/btn_checkbox" />
+
+        <TextView
+            android:id="@+id/TxTQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:gravity="center"/>
+
+        <RadioGroup
+            android:id="@+id/RadioGroupAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TxtShow"
+            android:padding="10dp">
+
+            <RadioButton
+                android:id="@+id/RbA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_answer"
+                android:padding="10dp"
+                android:text="A. "
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:id="@+id/RbB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/btn_answer"
+                android:padding="10dp"
+                android:text="B. "
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:id="@+id/RbC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/btn_answer"
+                android:padding="10dp"
+                android:text="C. "
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:id="@+id/RbD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/btn_answer"
+                android:padding="10dp"
+                android:text="D. "
+                android:textSize="20dp" />
+        </RadioGroup>
+
+        <ImageButton
+            android:id="@+id/BtAnswer"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/RadioGroupAnswer"
+            android:layout_marginEnd="80dp"
+            android:layout_marginRight="80dp"
+            android:background="@drawable/answer" />
+
+        <LinearLayout
+            android:id="@+id/TxtShow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TxTQuestion"
+            android:background="@drawable/btn_shape"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/txtScore"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#110000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/TxtNumberQuestion"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#110000"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
